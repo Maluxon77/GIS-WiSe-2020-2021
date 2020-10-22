@@ -22,14 +22,15 @@ h2{
 }
 
 .Picture{
-    width: 50%;
+    width: 800px;
     margin-left: auto;
     margin-right: auto;
     
 }
 
 .Videos{
-    width: 50%;
+    width: 800px;
+    height: 500px;
     display: block;
     margin: 0 auto;
 
