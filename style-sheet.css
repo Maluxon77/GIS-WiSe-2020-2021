@@ -1,0 +1,22 @@
+body {
+    background-image: url(background.png);
+}
+
+h1{
+    color: blueviolet;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 100px;
+    position: relative;
+    text-shadow: 3px 2px black;
+    left: 600px;
+}
+
+h2{
+    color: darkblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: oblique;
+    font-size: 50px;
+    position: relative;
+    left: 750px;
+}
