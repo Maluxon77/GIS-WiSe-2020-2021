@@ -38,5 +38,32 @@ h2{
 
 #navigation{
     overflow: hidden;
-    background-color: cyan;
+    background-color: black;
 }
+
+#navigation a{
+    float: right;
+    display: block;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 14px;
+}
+
+.Inhalt {
+    padding: 16px;
+}
+
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#navigation a:hover{
+    background-color: chartreuse;
+    color: darkblue;
+}
+
+
+

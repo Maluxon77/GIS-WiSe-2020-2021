@@ -17,33 +17,40 @@
                 <a href="Steckbrief">About</a>
                 <a href="Kontakt">Contact</a>
             </div>
+         <div class="Inhalt">
+            <section>
+                <h2><b><i>Blender Projekte</i></b></h2>
+                <div class="Picture">
+                    <img src = "Schildehtml.png" alt width="800">
+                    <img src = "Schild&Schwerthtml.png" alt width="800">
+                    <img src = "K1html.png" alt width="800"> 
+                </div>
+            </section>
             
-        <section>
-            <h2><b><i>Blender Projekte</i></b></h2>
-            <div class="Picture">
-                <img src = "Schildehtml.png" alt width="800">
-                <img src = "Schild&Schwerthtml.png" alt width="800">
-                <img src = "K1html.png" alt width="800"> 
-            </div>
-        </section>
-        
-        <section>
-            <h2><i>Videoprojekte</i></h2>
-            <div class="Videos">
-                <video src = "Kel'thuzad MEOW.mp4" controls width = "800"></video>
-                <video src ="Mannlichster Schrei in der Geschichte der Menschheit! [Quelle in Beschreibung].mp4" controls width = "800"></video>
-            </div>
-        </section> 
-        
+            <section>
+                <h2><i>Videoprojekte</i></h2>
+                <div class="Videos">
+                    <video src = "Kel'thuzad MEOW.mp4" controls width = "800"></video>
+                    <video src ="Mannlichster Schrei in der Geschichte der Menschheit! [Quelle in Beschreibung].mp4" controls width = "800"></video>
+                </div>
+            </section> 
+         </div>
         </main>
 
-        <footer>
-            
-        </footer>
+        <script>
+            window.onscroll = function() {NavigationsFunktion()}
+            var navigation = document.getElementById("navigation");
+            var sticky = navigation.offsetTop;
+            function NavigationsFunktion() {
+                if(window.pageYOffset >= sticky) {
+                    navigation.classList.add("sticky")
+                } else{
+                    navigation.classList.remove("sticky");
+                }
+            }
+        </script>
         
-    
-     
-    
+        
     </body>
     
     </html>
