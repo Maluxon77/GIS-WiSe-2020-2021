@@ -39,6 +39,9 @@ h2{
 #navigation{
     overflow: hidden;
     background-color: black;
+    background-position: top right;
+    
+    
 }
 
 #navigation a{
@@ -46,8 +49,9 @@ h2{
     display: block;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
     text-align: center;
-    padding: 14px;
+    padding: 14px
 }
 
 .Inhalt {
