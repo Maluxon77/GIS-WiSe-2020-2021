@@ -20,3 +20,11 @@ h2{
     position: relative;
     left: 750px;
 }
+
+.Pictures{
+    background: blueviolet;
+    width: 800px;
+    border: 10px red;
+    padding: 30px;
+    margin: 20px;
+}
