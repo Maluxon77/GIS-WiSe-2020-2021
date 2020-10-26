@@ -1,5 +1,5 @@
 body {
-    background-image: url(2ndBackground.png), url(background2.png);
+    background-image: url(/A.1.3/Portfolio/Pictures/2ndBackground.png), url(/A.1.3/Portfolio/Pictures/background2.png);
     background-position: center top, right top;
     background-repeat: no-repeat, repeat;
     background-size: 60%, 1%;
@@ -14,20 +14,29 @@ h1{
     font-style: italic;
     font-size: 100px;
     position: relative;
-    text-shadow: 3px 2px black;
+    bottom: 130px;
+    text-shadow: 5px 4px black;
     text-align: center;
+    
+    
 }
 
 h2{
     color: rgb(139, 0, 0);
     width: 100%;
+    position: relative;
+    top: 270px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
     font-style: oblique;
     font-size: 50px;
     text-align: center;
+    
 }
 
 .BlenderPicture{
+    position: relative; 
+    top: 270px;
+    border: 5px solid green;
     width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -35,6 +44,8 @@ h2{
 }
 
 .Videos{
+    position: relative;
+    top: 270px;
     width: 800px;
     height: 500px;
     display: block;
@@ -79,6 +90,27 @@ h2{
     width: 100%;
 
 }
+
+#BeschreibungsText{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative;
+    width: 600px;
+    left: 500px;
+    bottom: 3000px;
+    font-size: 20px;
+    color: grey;
+    text-shadow:1px 1px black;
+}
+
+.SocialMedia{
+    position: absolute;
+    left: 1160px;
+    
+
+
+}
+
+
 
 
 
