@@ -14,7 +14,7 @@ h1{
     font-style: italic;
     font-size: 100px;
     position: relative;
-    bottom: 100px;
+    bottom: 90px;
     text-shadow: 5px 4px black;
     text-align: center;
     
@@ -24,13 +24,18 @@ h1{
 h2{
     color: rgb(139, 0, 0);
     width: 100%;
+    position: relative;
+    top: 270px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
     font-style: oblique;
     font-size: 50px;
     text-align: center;
+    
 }
 
 .BlenderPicture{
+    position: relative; 
+    top: 270px;
     border: 5px solid green;
     width: 800px;
     margin-left: auto;
@@ -39,6 +44,8 @@ h2{
 }
 
 .Videos{
+    position: relative;
+    top: 270px;
     width: 800px;
     height: 500px;
     display: block;
@@ -77,28 +84,23 @@ h2{
     color: darkblue;
 }
 
-#secondBGR{
-    position: relative;
-    top: 0;
-    width: 100%;
-
-}
-
 #BeschreibungsText{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     position: relative;
     width: 600px;
     left: 500px;
-    bottom: 3050px;
+    bottom: 3540px;
     font-size: 20px;
     color: grey;
     text-shadow:1px 1px black;
 }
 
 .SocialMedia{
-    position: relative;
-    left: 1150px;
+    position: absolute;
+    left: 1160px;
+    bottom: 5900px;
     
+
 
 }
 
