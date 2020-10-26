@@ -5,8 +5,17 @@
 <head>
     <meta charset="utf-8">
     <title>Kontaktmöglichkeiten</title>
+    <link rel="stylesheet" href="/A.1.3/Portfolio/style-sheet.css">
 
 </head>
+
+<strong>
+    <div id="navigation">
+        <a href="https://maluxon77.github.io/GIS-WiSe-2020-2021/A.1.3/Kontakt/Kontakt.html">Contact</a>
+        <a href="https://maluxon77.github.io/GIS-WiSe-2020-2021/A.1.3/Steckbrief/Steckbrief.html">About</a>
+        <a href="Portfolio.html">Portfolio</a>     
+   </div>
+</strong>
 
 
 <body>
@@ -18,13 +27,26 @@
     <main>
         <a href="https://www.instagram.com/maluxon/?hl=de"> <img src = "Instalogo.webp" height = "50" width ="50" alt> </a> 
         <a href="https://www.youtube.com/channel/UC_JYL25xIbyEFHHn1nGT2NA"> <img src = "YouTube_icon.png" height = "60" width = "60" alt></a>
-        <a href="https://github.com/Maluxon77"> <img src = "Githublogo.webp" height ="50" width = "50" alt></a>
+        <a href="https://github.com/Maluxon77"> <img src = "Githublogo.webp"></a>
+
+        
+        <script>
+            window.onscroll = function() {NavigationsFunktion()}
+            var navigation = document.getElementById("navigation");
+            var sticky = navigation.offsetTop;
+            function NavigationsFunktion() {
+                if(window.pageYOffset >= sticky) {
+                    navigation.classList.add("sticky")
+                } else{
+                    navigation.classList.remove("sticky");
+                }
+            }
+        </script>
     
     </main>
     
     <footer>
-        <p>Hier geht es zu meinem <a href ="https://maluxon77.github.io/GIS-WiSe-2020-2021/Profil/Steckbrief">Steckbrief</a></p>
-        <p>Hier geht es zu meinem <a href ="https://maluxon77.github.io/GIS-WiSe-2020-2021/Profil/Portfolio">Portfolio</a></p>
+        
     </footer>
     
 

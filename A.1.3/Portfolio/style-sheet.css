@@ -1,6 +1,12 @@
 body {
-    background-image: url(background2.png);
+    background-image: url(2ndBackground.png), url(background2.png);
+    background-position: center top, right top;
+    background-repeat: no-repeat, repeat;
+    background-size: 60%, 1%;
+    background-position-y: -450px, 0px;
+    padding: 15px;
 }
+
 
 h1{
     color: blueviolet;
@@ -13,7 +19,7 @@ h1{
 }
 
 h2{
-    color: darkblue;
+    color: rgb(139, 0, 0);
     width: 100%;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
     font-style: oblique;
@@ -21,7 +27,7 @@ h2{
     text-align: center;
 }
 
-.Picture{
+.BlenderPicture{
     width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -39,9 +45,7 @@ h2{
 #navigation{
     overflow: hidden;
     background-color: black;
-    background-position: top right;
-    
-    
+    width: max-content;   
 }
 
 #navigation a{
@@ -50,8 +54,7 @@ h2{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-decoration: none;
-    text-align: center;
-    padding: 14px
+    padding: 16px;
 }
 
 .Inhalt {
@@ -61,12 +64,20 @@ h2{
 .sticky{
     position: fixed;
     top: 0;
+    right: 0;
     width: 100%;
 }
 
 #navigation a:hover{
     background-color: chartreuse;
     color: darkblue;
+}
+
+#secondBGR{
+    position: relative;
+    top: 0;
+    width: 100%;
+
 }
 
 

@@ -5,8 +5,18 @@
 
 <meta charset="utf-8">
 <title>Das bin ich</title>
+<link rel="stylesheet" href="/A.1.3/Portfolio/style-sheet.css">
 
 </head>
+
+<strong>
+    <div id="navigation">
+        <a href="https://maluxon77.github.io/GIS-WiSe-2020-2021/A.1.3/Kontakt/Kontakt.html">Contact</a>
+        <a href="https://maluxon77.github.io/GIS-WiSe-2020-2021/A.1.3/Steckbrief/Steckbrief.html">About</a>
+        <a href="Portfolio.html">Portfolio</a>     
+   </div>
+</strong>
+
 <body>
     <header>
 
@@ -16,12 +26,12 @@
         <img src ="Böld.jpg" alt height = "375" width ="400">
         <h2>Infos</h2>
         <p> Mein Name ist Finn Ganz und ich interessiere mich für Gamedesign und alles was sich damit befasst!</p>
-        <h3>Mein Studium</h3>
+        <h2>Mein Studium</h2>
         <p>Ich studiere Medieninformatik (MIB) an der Hochschule Furtwangen (HFU) im 2ten Semester!</p>
         <p> <a href="https://hs-furtwangen.github.io/GIS-WiSe-2020-2021/content/P1.1/">Zurzeit bearbeite ich diese Aufgaben</a> </p>
         <p>Meine <a href="#Anker">Kommilitonen</a> bearbeiten die gleichen Aufgaben.</p>
 
-        <h3>Spiele die mich zu viel meiner Lebenszeit Kosten (nach Stunden sortiert == Hover über den Namen)</h3>
+        <h2>Spiele die mich zu viel meiner Lebenszeit Kosten</h2>
         <ol>
             <li><span title = "4278 Stunden">Dota2</span></li>
             <li><span title = "300 Stunden">Dark Souls 3</span></li>
@@ -30,7 +40,7 @@
             <li><span title = "230 Stunden">The Binding of Isaac: Rebirth</span></li>
             <li><span title = "100 Stunden">Dark Souls</span></li>
         </ol>
-        <h3>Kommilitonen</h3>
+        <h2>Kommilitonen</h2>
         <p>Bli Bla Blubb</p>
         <p>Kratos</p>
         <p>Rick</p>
@@ -40,11 +50,23 @@
         <p>Davriel</p>
         <p id="Anker">Nicol Bolas</p>
         <button type ="button">Wenn du hier Klickst erreichst du nichts!</button>
+
+        <script>
+            window.onscroll = function() {NavigationsFunktion()}
+            var navigation = document.getElementById("navigation");
+            var sticky = navigation.offsetTop;
+            function NavigationsFunktion() {
+                if(window.pageYOffset >= sticky) {
+                    navigation.classList.add("sticky")
+                } else{
+                    navigation.classList.remove("sticky");
+                }
+            }
+        </script>
     </main>
     
     <footer>
-        <p>Hier geht es zu meinem <a href ="https://maluxon77.github.io/GIS-WiSe-2020-2021/Profil/Portfolio">Portfolio</a></p>
-        <p>Hier geht es zu den <a href ="https://maluxon77.github.io/GIS-WiSe-2020-2021/Profil/Kontakt">Kontaktmöglichkeiten</a></p>
+
     </footer>
 
 
