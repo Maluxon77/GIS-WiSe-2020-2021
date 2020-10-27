@@ -5,12 +5,13 @@ body {
     background-size: 60%, 1%;
     background-position-y: -450px, 0px;
     padding: 15px;
+    font-family: sans-serif;
 }
 
 
 h1{
     color: blueviolet;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
     font-style: italic;
     font-size: 100px;
     position: relative;
@@ -26,7 +27,7 @@ h2{
     width: 100%;
     position: relative;
     top: 270px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', sans-serif;
+    font-family: sans-serif;
     font-style: oblique;
     font-size: 50px;
     text-align: center;
@@ -63,7 +64,7 @@ h2{
     float: right;
     display: block;
     color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
     text-decoration: none;
     padding: 16px;
 }
@@ -85,11 +86,11 @@ h2{
 }
 
 #BeschreibungsText{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: sans-serif;
     position: relative;
     width: 600px;
     left: 500px;
-    bottom: 3540px;
+    bottom: 150px;
     font-size: 20px;
     color: grey;
     text-shadow:1px 1px black;
