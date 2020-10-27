@@ -85,6 +85,10 @@ h2{
     color: darkblue;
 }
 
+.current{
+    background-color: chartreuse;
+}
+
 #BeschreibungsText{
     font-family: sans-serif;
     position: relative;
@@ -100,10 +104,32 @@ h2{
     position: absolute;
     left: 1160px;
     bottom: 580px;
-    
-
-
 }
+
+form {
+    position: relative;
+    left: 750px;
+    top: 300px;
+    background-color: #eee;
+    width: 300px; 
+    padding: 20px;
+    border: 1px solid #8c8c8c;
+  }
+  label { 
+    display: block;
+    
+  }
+  input#absender,
+  textarea {
+    width: 300px;
+    border: 3px solid #9c9c9c;
+    margin-bottom: 30px;
+  }
+  textarea {
+    height: 50px;
+  }
+  
+  
 
 
 

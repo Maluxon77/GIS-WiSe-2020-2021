@@ -12,9 +12,9 @@
 
 
     <div id="navigation">
-        <a href="https://maluxon77.github.io/GIS-WiSe-2020-2021/A.1.3/Kontakt/Kontakt.html">Contact</a>
-        <a href="https://maluxon77.github.io/GIS-WiSe-2020-2021/A.1.3/Steckbrief/Steckbrief.html">About</a>
-        <a href="https://maluxon77.github.io/GIS-WiSe-2020-2021/A.1.3/Portfolio/Portfolio.html">Portfolio</a>     
+        <a class="current" href="https://maluxon77.github.io/GIS-WiSe-2020-2021/A.1.3/Kontakt/Kontakt.html">Contact</a>
+        <a  href="https://maluxon77.github.io/GIS-WiSe-2020-2021/A.1.3/Steckbrief/Steckbrief.html">About</a>
+        <a  href="https://maluxon77.github.io/GIS-WiSe-2020-2021/A.1.3/Portfolio/Portfolio.html">Portfolio</a>     
    </div>
 
   
@@ -35,14 +35,27 @@
 
         <h2>KONTAKT</h2>
 
-        <form class="Formular">
-          
-            <p><label>Vorname</label>
-            <input class="w3-input w3-border" name="first" type="text"></p>
-          
-            <p><label>Nachname</label>
-            <input class="w3-input w3-border" name="last" type="text"></p>
-          </form>
+        <form id="Kontakt" name="Formular" action="">
+            <div>
+                <label for="absender">Vorname:</label>
+                <input type="text" id="absender" name="absender" />
+              </div>
+              <div>
+                <label for="absender">Nachname:</label>
+                <input type="text" id="absender" name="absender" />
+              </div>
+            <div>
+              <label for="absender">E-Mail-Adresse:</label>
+              <input type="text" id="absender" name="absender" />
+            </div>
+            <div>
+              <label for="nachricht">Nachricht:</label>
+              <textarea id="nachricht" name="nachricht" cols="2" rows="2"></textarea>
+            </div>
+            <div>
+              <input type="submit" value="Absenden" />
+            </div>
+            </form>
 
         
         <script>
