@@ -1,3 +1,19 @@
+.sticky{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+#navigation a:hover{
+    background-color: chartreuse;
+    color: darkblue;
+}
+
+.current{
+    background-color: chartreuse;
+}
+
 body {
     background-image: url(2ndBackground.png), url(background2.png);
     background-position: center top, right top;
@@ -73,21 +89,6 @@ h2{
     padding: 16px;
 }
 
-.sticky{
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: 100%;
-}
-
-#navigation a:hover{
-    background-color: chartreuse;
-    color: darkblue;
-}
-
-.current{
-    background-color: chartreuse;
-}
 
 #BeschreibungsText{
     font-family: sans-serif;
@@ -106,7 +107,30 @@ h2{
     bottom: 580px;
 }
 
-#ListeN{
+form {
+    position: relative;
+    left: 750px;
+    top: 300px;
+    background-color: #eee;
+    width: 300px; 
+    padding: 20px;
+    border: 1px solid #8c8c8c;
+  }
+  label { 
+    display: block;
+    
+  }
+  input#absender,
+  textarea {
+    width: 300px;
+    border: 3px solid #9c9c9c;
+    margin-bottom: 30px;
+  }
+  textarea {
+    height: 50px;
+  }
+
+  #ListeN{
     font-family: sans-serif;
     font-size: 30px;
     inline-size: 10px;
@@ -115,7 +139,6 @@ h2{
     top: 250px;
     color: darkviolet;
     
-
 }
 
 #Name{
@@ -175,37 +198,344 @@ h2{
     top: 10px;
 }
 
-#Profilbild1{
+#Profilbild{
     margin-left: auto;
     margin-right: auto;
     width: 6ex;
 }
+  
+  /*Mobile*/
+  @media screen and (max-width: 600px) {
+    
+    h1{
+        color: violet;
+        font-size: 50px;
+        position: relative center;
+        top: 10px;
+        
+    }
 
-form {
-    position: relative;
-    left: 750px;
-    top: 300px;
-    background-color: #eee;
-    width: 300px; 
-    padding: 20px;
-    border: 1px solid #8c8c8c;
-  }
+    h2{
+        font-size: 40px
+    }
 
-  label { 
-    display: block;
+    body{
+        background-size: 100%, 1%;
+        background-position-y: 0px, 0px;
+    }
+
+    #ListeN{
+        font-family: sans-serif;
+        font-size: 18px;
+        inline-size: 10px;
+        position: relative;
+        left: 00px;
+        top: 250px;
+        color: darkviolet;
+
+    }
+
+    #BeschreibungsText{
+        font-family: sans-serif;
+        position: relative;
+        width: 200px;
+        left: 40px;
+        bottom: -150px;
+        font-size: 15px;
+        color: grey;
+        text-shadow:1px 1px black;
+    }
+
+    .SocialMedia{
+        position: absolute;
+        left: 60px;
+        bottom: 220px;
+    }
+
+    .BlenderPicture{
+        position: relative; 
+        width: 100px;
+        right: 35px;
+        margin-bottom: 0%;
+        margin-top: 0%;
+    
+    }
+
+    .BlenderPicture img{
+        width: 200px;
+    }
+
+    .Profilbild img{
+        width: 200px;
+        height: 99px;
+        position: relative;
+        top: 120px;
+        left: 30px;
+    }
+
+    
+    .Videos{
+        position: relative;
+        top: 270px;
+        width: 250px;
+        height: 500px;
+        display: block;
+        margin: 0 auto;
+    
+    }
+
+    video{
+        width: 250px;
+    }
+        
+    form {
+        position: relative;
+        left: 10px;
+        top: 300px;
+        background-color: #eee;
+        width: 200px; 
+        padding: 20px;
+        border: 1px solid #8c8c8c;
+      }
+      label { 
+        display: block;
+        
+      }
+      input#absender,
+      textarea {
+        width: 200px;
+        border: 3px solid #9c9c9c;
+        margin-bottom: 30px;
+      }
+      textarea {
+        height: 50px;
+      }
+      
+    #Name{
+        font-family: sans-serif;
+        font-size: 15px;
+        position: relative;
+        left: 60px;
+        top: 105px;
+    }
+    
+    #Alter{
+        font-family: sans-serif;
+        font-size: 15px;
+        position: relative;
+        left: 60px;
+        top: 110px;
+    
+    }
+    
+    #Größe{
+        font-family: sans-serif;
+        font-size: 15px;
+        position: relative;
+        left: 70px;
+        top: 115px;
+    }
+    
+    #Augenfarbe{
+        font-family: sans-serif;
+        font-size: 15px;
+        position: relative;
+        left: 135px;
+        top: 120px;
+    }
+    
+    #Geburtstag{
+        font-family: sans-serif;
+        font-size: 15px;
+        position: relative;
+        left: 135px;
+        top: 125px;
+    }
+    
+    #Beschäftigung{
+        font-family: sans-serif;
+        font-size: 15px;
+        position: relative;
+        left: 165px;
+        top: 127px;
+        width: 500px;
+    }
+    
+    #Interessen{
+        font-family: sans-serif;
+        font-size: 15px;
+        position: relative;
+        left: 125px;
+        top: 130px;
+        width: 500px;
+    }
     
   }
-  input#absender,
-  textarea {
-    width: 300px;
-    border: 3px solid #9c9c9c;
-    margin-bottom: 30px;
+
+  /*Tablet*/
+  @media screen and (max-width:1024px) and (min-width:600px){
+
+    h1{
+        color: violet;
+        font-size: 150px;
+        position: relative center;
+        top: 10px;
+        
+    }
+
+    body{
+        background-size: 100%, 1%;
+        background-position-y: 0px, 0px;
+    }
+
+    #BeschreibungsText{
+        font-family: sans-serif;
+        position: relative;
+        width: 600px;
+        left: 40px;
+        bottom: 10px;
+        font-size: 20px;
+        color: grey;
+        text-shadow:1px 1px black;
+    }
+
+    #ListeN{
+        font-family: sans-serif;
+        font-size: 30px;
+        inline-size: 10px;
+        position: relative;
+        left: 00px;
+        top: 250px;
+        color: darkviolet;
+
+    }
+
+    .SocialMedia{
+        position: absolute;
+        left: 280px;
+        bottom: 150px;
+    }
+
+    .BlenderPicture{
+        position: relative; 
+        width: 100px;
+        right: 200px;
+        margin-bottom: 0%;
+        margin-top: 0%;
+    }
+
+    .BlenderPicture img{
+        width: 500px;
+    }
+
+    .Profilbild img{
+        width: 500px;
+        height: 400px;
+        position: relative;
+        top: 120px;
+        left: -50px;
+    }
+
+    .Videos{
+        position: relative;
+        top: 270px;
+        width: 450px;
+        height: 500px;
+        display: block;
+        margin: 0 auto;
+    
+    }
+
+    video{
+        width: 480px;
+    }
+
+    form {
+        position: relative;
+        left: 10px;
+        top: 300px;
+        background-color: #eee;
+        width: 600px; 
+        padding: 20px;
+        border: 1px solid #8c8c8c;
+      }
+
+      label { 
+        display: block; 
+      }
+
+      input#absender,
+      textarea {
+        width: 500px;
+        border: 3px solid #9c9c9c;
+        margin-bottom: 30px;
+      }
+
+      textarea {
+        height: 50px;
+      }
+
+      #Name{
+        font-family: sans-serif;
+        font-size: 24px;
+        position: relative;
+        left: 100px;
+        top: 15px;
+    }
+    
+    #Alter{
+        font-family: sans-serif;
+        font-size: 24px;
+        position: relative;
+        left: 100px;
+        top: 20px;
+    
+    }
+    
+    #Größe{
+        font-family: sans-serif;
+        font-size: 24px;
+        position: relative;
+        left: 120px;
+        top: 25px;
+    }
+    
+    #Augenfarbe{
+        font-family: sans-serif;
+        font-size: 24px;
+        position: relative;
+        left: 220px;
+        top: 30px;
+    }
+    
+    #Geburtstag{
+        font-family: sans-serif;
+        font-size: 24px;
+        position: relative;
+        left: 220px;
+        top: 34px;
+    }
+    
+    #Beschäftigung{
+        font-family: sans-serif;
+        font-size: 24px;
+        position: relative;
+        left: 260px;
+        top: 48px;
+        width: 1000px;
+    }
+    
+    #Interessen{
+        font-family: sans-serif;
+        font-size: 24px;
+        position: relative;
+        left: 210px;
+        top: 52px;
+        width: 900px;
+    }
+
   }
 
-  textarea {
-    height: 50px;
-  }
-  
   
 
 
