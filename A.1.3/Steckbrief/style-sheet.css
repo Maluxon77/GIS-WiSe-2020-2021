@@ -1,8 +1,14 @@
+main * {
+    font-family: sans-serif;
+}
+
+
 .sticky{
     position: fixed;
     top: 0;
     right: 0;
     width: 100%;
+    z-index: 9;
 }
 
 #navigation a:hover{
@@ -27,7 +33,8 @@ body {
 
 h1{
     color: blueviolet;
-    font-family: sans-serif;
+    animation-name: Titel;
+    animation-duration: 10s;
     font-style: italic;
     font-size: 100px;
     position: relative;
@@ -35,6 +42,11 @@ h1{
     text-shadow: 5px 4px black;
     text-align: center;
     
+}
+
+@keyframes Titel{
+    from {color: blueviolet;}
+    to { color:  blue;}
     
 }
 
@@ -43,7 +55,6 @@ h2{
     width: 100%;
     position: relative;
     top: 270px;
-    font-family: sans-serif;
     font-style: oblique;
     font-size: 50px;
     text-align: center;
@@ -80,7 +91,6 @@ h2{
     float: right;
     display: block;
     color: white;
-    font-family: sans-serif;
     text-decoration: none;
     padding: 16px;
 }
@@ -91,7 +101,7 @@ h2{
 
 
 #BeschreibungsText{
-    font-family: sans-serif;
+
     position: relative;
     width: 600px;
     left: 500px;
@@ -131,7 +141,6 @@ form {
   }
 
   #ListeN{
-    font-family: sans-serif;
     font-size: 30px;
     inline-size: 10px;
     position: relative;
@@ -142,7 +151,6 @@ form {
 }
 
 #Name{
-    font-family: sans-serif;
     font-size: 30px;
     position: relative;
     left: 410px;
@@ -150,7 +158,6 @@ form {
 }
 
 #Alter{
-    font-family: sans-serif;
     font-size: 30px;
     position: relative;
     left: 420px;
@@ -159,7 +166,6 @@ form {
 }
 
 #Größe{
-    font-family: sans-serif;
     font-size: 30px;
     position: relative;
     left: 430px;
@@ -167,7 +173,6 @@ form {
 }
 
 #Augenfarbe{
-    font-family: sans-serif;
     font-size: 30px;
     position: relative;
     left: 530px;
@@ -175,7 +180,6 @@ form {
 }
 
 #Geburtstag{
-    font-family: sans-serif;
     font-size: 30px;
     position: relative;
     left: 530px;
@@ -183,7 +187,6 @@ form {
 }
 
 #Beschäftigung{
-    font-family: sans-serif;
     font-size: 30px;
     position: relative;
     left: 580px;
@@ -191,7 +194,6 @@ form {
 }
 
 #Interessen{
-    font-family: sans-serif;
     font-size: 30px;
     position: relative;
     left: 510px;
@@ -225,7 +227,6 @@ form {
     }
 
     #ListeN{
-        font-family: sans-serif;
         font-size: 18px;
         inline-size: 10px;
         position: relative;
@@ -236,7 +237,6 @@ form {
     }
 
     #BeschreibungsText{
-        font-family: sans-serif;
         position: relative;
         width: 200px;
         left: 40px;
@@ -312,7 +312,6 @@ form {
       }
       
     #Name{
-        font-family: sans-serif;
         font-size: 15px;
         position: relative;
         left: 60px;
@@ -320,7 +319,6 @@ form {
     }
     
     #Alter{
-        font-family: sans-serif;
         font-size: 15px;
         position: relative;
         left: 60px;
@@ -329,7 +327,6 @@ form {
     }
     
     #Größe{
-        font-family: sans-serif;
         font-size: 15px;
         position: relative;
         left: 70px;
@@ -337,7 +334,6 @@ form {
     }
     
     #Augenfarbe{
-        font-family: sans-serif;
         font-size: 15px;
         position: relative;
         left: 135px;
@@ -345,7 +341,6 @@ form {
     }
     
     #Geburtstag{
-        font-family: sans-serif;
         font-size: 15px;
         position: relative;
         left: 135px;
@@ -353,7 +348,6 @@ form {
     }
     
     #Beschäftigung{
-        font-family: sans-serif;
         font-size: 15px;
         position: relative;
         left: 165px;
@@ -362,7 +356,6 @@ form {
     }
     
     #Interessen{
-        font-family: sans-serif;
         font-size: 15px;
         position: relative;
         left: 125px;
@@ -389,7 +382,6 @@ form {
     }
 
     #BeschreibungsText{
-        font-family: sans-serif;
         position: relative;
         width: 600px;
         left: 40px;
@@ -400,7 +392,6 @@ form {
     }
 
     #ListeN{
-        font-family: sans-serif;
         font-size: 30px;
         inline-size: 10px;
         position: relative;
@@ -476,7 +467,6 @@ form {
       }
 
       #Name{
-        font-family: sans-serif;
         font-size: 24px;
         position: relative;
         left: 100px;
@@ -484,7 +474,6 @@ form {
     }
     
     #Alter{
-        font-family: sans-serif;
         font-size: 24px;
         position: relative;
         left: 100px;
@@ -493,7 +482,6 @@ form {
     }
     
     #Größe{
-        font-family: sans-serif;
         font-size: 24px;
         position: relative;
         left: 120px;
@@ -501,7 +489,6 @@ form {
     }
     
     #Augenfarbe{
-        font-family: sans-serif;
         font-size: 24px;
         position: relative;
         left: 220px;
@@ -509,7 +496,6 @@ form {
     }
     
     #Geburtstag{
-        font-family: sans-serif;
         font-size: 24px;
         position: relative;
         left: 220px;
@@ -517,7 +503,6 @@ form {
     }
     
     #Beschäftigung{
-        font-family: sans-serif;
         font-size: 24px;
         position: relative;
         left: 260px;
@@ -526,7 +511,6 @@ form {
     }
     
     #Interessen{
-        font-family: sans-serif;
         font-size: 24px;
         position: relative;
         left: 210px;
