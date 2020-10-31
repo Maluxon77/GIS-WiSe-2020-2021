@@ -146,7 +146,6 @@ form {
 
   #ListeN{
     font-size: 30px;
-    inline-size: 10px;
     position: relative;
     left: 300px;
     top: 250px;
@@ -157,14 +156,14 @@ form {
 #Name{
     font-size: 30px;
     position: relative;
-    left: 410px;
+    left: 440px;
     top: -20px;
 }
 
 #Alter{
     font-size: 30px;
     position: relative;
-    left: 420px;
+    left: 450px;
     top: -50px;
 
 }
@@ -172,35 +171,35 @@ form {
 #Größe{
     font-size: 30px;
     position: relative;
-    left: 420px;
+    left: 450px;
     top: -80px;
 }
 
 #Augenfarbe{
     font-size: 30px;
     position: relative;
-    left: 520px;
-    top: -105px;
+    left: 557px;
+    top: -107px;
 }
 
 #Geburtstag{
     font-size: 30px;
     position: relative;
-    left: 520px;
-    top: -135px;
+    left: 550px;
+    top: -140px;
 }
 
 #Beschäftigung{
     font-size: 30px;
     position: relative;
-    left: 580px;
+    left: 610px;
     top: -167px;
 }
 
 #Interessen{
     font-size: 30px;
     position: relative;
-    left: 510px;
+    left: 540px;
     top: -197px;
 }
 
@@ -236,7 +235,6 @@ form {
 
     #ListeN{
         font-size: 18px;
-        inline-size: 10px;
         position: relative;
         left: 00px;
         top: 250px;
@@ -322,52 +320,52 @@ form {
     #Name{
         font-size: 15px;
         position: relative;
-        left: 60px;
-        top: 90px;
+        left: 100px;
+        top: 85px;
     }
     
     #Alter{
         font-size: 15px;
         position: relative;
-        left: 65px;
-        top: 77px;
+        left: 105px;
+        top: 75px;
     
     }
     
     #Größe{
         font-size: 15px;
         position: relative;
-        left: 70px;
-        top: 67px;
+        left: 110px;
+        top: 63px;
     }
     
     #Augenfarbe{
         font-size: 15px;
         position: relative;
-        left: 130px;
-        top: 55px;
+        left: 170px;
+        top: 53px;
     }
     
     #Geburtstag{
         font-size: 15px;
         position: relative;
-        left: 135px;
-        top: 45px;
+        left: 169px;
+        top: 43px;
     }
     
     #Beschäftigung{
         font-size: 15px;
         position: relative;
-        left: 165px;
-        top: 35px;
+        left: 200px;
+        top: 32px;
         width: 500px;
     }
     
     #Interessen{
         font-size: 15px;
         position: relative;
-        left: 125px;
-        top: 25px;
+        left: 165px;
+        top: 20px;
         width: 500px;
     }
     
@@ -404,9 +402,8 @@ form {
 
     #ListeN{
         font-size: 30px;
-        inline-size: 10px;
         position: relative;
-        left: 00px;
+        left: 10px;
         top: 250px;
         color: darkviolet;
 
@@ -480,52 +477,52 @@ form {
       #Name{
         font-size: 24px;
         position: relative;
-        left: 100px;
-        top: -10px;
+        left: 150px;
+        top: -15px;
     }
     
     #Alter{
         font-size: 24px;
         position: relative;
-        left: 110px;
-        top: -25px;
+        left: 157px;
+        top: -32px;
     
     }
     
     #Größe{
         font-size: 24px;
         position: relative;
-        left: 120px;
-        top: -45px;
+        left: 170px;
+        top: -52px;
     }
     
     #Augenfarbe{
         font-size: 24px;
         position: relative;
-        left: 220px;
-        top: -65px;
+        left: 265px;
+        top: -68px;
     }
     
     #Geburtstag{
         font-size: 24px;
         position: relative;
-        left: 220px;
-        top: -80px;
+        left: 260px;
+        top: -87px;
     }
     
     #Beschäftigung{
         font-size: 24px;
         position: relative;
-        left: 280px;
-        top: -100px;
+        left: 320px;
+        top: -105px;
         width: 1000px;
     }
     
     #Interessen{
         font-size: 24px;
         position: relative;
-        left: 210px;
-        top: -117px;
+        left: 250px;
+        top: -120px;
         width: 900px;
     }
 
