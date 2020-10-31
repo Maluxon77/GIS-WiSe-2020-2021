@@ -457,59 +457,48 @@ form {
         width: 600px; 
         padding: 20px;
         border: 1px solid #8c8c8c;
-      }
-
-      label { 
+    }
+    label { 
         display: block; 
-      }
-
-      input#absender,
-      textarea {
+    }
+    input#absender, textarea {
         width: 500px;
         border: 3px solid #9c9c9c;
         margin-bottom: 30px;
-      }
-
-      textarea {
+    }
+    textarea {
         height: 50px;
-      }
-
-      #Name{
+    }
+    #Name{
         font-size: 24px;
         position: relative;
         left: 150px;
         top: -15px;
     }
-    
     #Alter{
         font-size: 24px;
         position: relative;
         left: 157px;
         top: -32px;
-    
     }
-    
     #Größe{
         font-size: 24px;
         position: relative;
         left: 170px;
         top: -52px;
     }
-    
     #Augenfarbe{
         font-size: 24px;
         position: relative;
         left: 265px;
         top: -68px;
     }
-    
     #Geburtstag{
         font-size: 24px;
         position: relative;
         left: 260px;
         top: -87px;
     }
-    
     #Beschäftigung{
         font-size: 24px;
         position: relative;
@@ -517,7 +506,6 @@ form {
         top: -105px;
         width: 1000px;
     }
-    
     #Interessen{
         font-size: 24px;
         position: relative;
@@ -525,7 +513,6 @@ form {
         top: -120px;
         width: 900px;
     }
-
   }
 
   
