@@ -34,7 +34,7 @@ body {
 h1{
     color: blueviolet;
     animation-name: Titel;
-    animation-duration: 10s;
+    animation-duration: 5s;
     font-style: italic;
     font-size: 100px;
     position: relative;

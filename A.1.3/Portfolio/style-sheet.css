@@ -2,6 +2,7 @@ main * {
     font-family: sans-serif;
 }
 
+
 .sticky{
     position: fixed;
     top: 0;
@@ -32,6 +33,8 @@ body {
 
 h1{
     color: blueviolet;
+    animation-name: Titel;
+    animation-duration: 5s;
     font-style: italic;
     font-size: 100px;
     position: relative;
@@ -39,6 +42,11 @@ h1{
     text-shadow: 5px 4px black;
     text-align: center;
     
+}
+
+@keyframes Titel{
+    from {color: blueviolet;}
+    to { color:  blue;}
     
 }
 
@@ -93,6 +101,7 @@ h2{
 
 
 #BeschreibungsText{
+
     position: relative;
     width: 600px;
     left: 500px;
