@@ -219,8 +219,6 @@ form {
 }
 
 .Profilbild{
-    position: relative;
-    top: 100px;
     border-radius: 10000px;
     border-color: hotpink;
     margin-left: auto;
