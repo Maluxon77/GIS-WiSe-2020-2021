@@ -24,7 +24,7 @@ body {
     background-image: url(2ndBackground.png), url(background2.png);
     background-position: center top, right top;
     background-repeat: no-repeat, repeat;
-    background-size: 60%, 1%;
+    background-size: 60%, 5000px;
     background-position-y: -450px, 0px;
     padding: 15px;
     font-family: sans-serif;
@@ -52,10 +52,15 @@ h1{
 
 h2{
     border-radius: 15px;
-    color: rgb(139, 0, 0);
-    width: 100%;
+    border-style: solid;
+    border-color: hotpink;
+    background-color: indigo;
+    box-shadow: 10px 15px 10px black;
+    color: cyan;
+    width:400px;
     position: relative;
     top: 270px;
+    left: 700px;
     font-style: oblique;
     font-size: 50px;
     text-align: center;
@@ -67,9 +72,10 @@ h2{
 }
 
 .BlenderPicture{
+    background-color: indigo;
     position: relative; 
     top: 270px;
-    border: 5px solid green;
+    border: 10px solid hotpink;
     width: 800px;
     margin-left: auto;
     margin-right: auto;
@@ -78,12 +84,19 @@ h2{
 
 .Videos{
     position: relative;
-    top: 270px;
+    border: 10px solid hotpink;
+    background-color: indigo;
+    top: 290px;
     width: 800px;
     height: 500px;
     display: block;
     margin: 0 auto;
 
+}
+
+#Musik{
+    position: relative;
+    left: 800px;
 }
 
 #navigation{
@@ -205,10 +218,12 @@ form {
     top: -197px;
 }
 
-#Profilbild{
+.Profilbild img{
+    border-radius: 100px;
+    border-color: hotpink;
     margin-left: auto;
     margin-right: auto;
-    width: 6ex;
+
 }
   
   /*Mobile*/
@@ -223,8 +238,22 @@ form {
     }
 
     h2{
-        font-size: 40px
+        border-radius: 15px;
+        border-style: solid;
+        border-color: hotpink;
+        background-color: indigo;
+        box-shadow: 10px 15px 10px black;
+        color: cyan;
+        width:300px;
+        position: relative;
+        top: 100px;
+        left: 55px;
+        font-style: oblique;
+        font-size: 40px;
+        text-align: center;
+        
     }
+    
 
     body{
         background-size: 100%, 1%;
@@ -262,12 +291,15 @@ form {
     }
 
     .BlenderPicture{
+        background-color: indigo;
         position: relative; 
-        width: 100px;
-        right: 35px;
-        margin-bottom: 0%;
-        margin-top: 0%;
-    
+        top: 100px;
+        right: 10px;
+        border: 10px solid hotpink;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        
     }
 
     .BlenderPicture img{
@@ -275,19 +307,22 @@ form {
     }
 
     .Profilbild img{
-        width: 200px;
-        height: 99px;
+        width: 250px;
+        height: 300px;
         position: relative;
-        top: 120px;
+        top: 00px;
         left: 30px;
     }
 
     
     .Videos{
         position: relative;
-        top: 270px;
+        border: 10px solid hotpink;
+        background-color: indigo;
+        top: 100px;
         width: 250px;
-        height: 500px;
+        height: 120px;
+        right: 10px;
         display: block;
         margin: 0 auto;
     
@@ -385,6 +420,23 @@ form {
         
     }
 
+    h2{
+        border-radius: 15px;
+        border-style: solid;
+        border-color: hotpink;
+        background-color: indigo;
+        box-shadow: 10px 15px 10px black;
+        color: cyan;
+        width:350px;
+        position: relative;
+        top: 250px;
+        left: 150px;
+        font-style: oblique;
+        font-size: 40px;
+        text-align: center;
+        
+    }
+
     body{
         background-size: 100%, 1%;
         background-position-y: 0px, 0px;
@@ -420,11 +472,13 @@ form {
     }
 
     .BlenderPicture{
+        background-color: indigo;
         position: relative; 
-        width: 100px;
-        right: 200px;
-        margin-bottom: 0%;
-        margin-top: 0%;
+        top: 250px;
+        right: 10px;
+        border: 10px solid hotpink;
+        width: 500px;
+        
     }
 
     .BlenderPicture img{
@@ -433,17 +487,20 @@ form {
 
     .Profilbild img{
         width: 500px;
-        height: 400px;
+        height: 600px;
         position: relative;
-        top: 120px;
+        top: 0px;
         left: -50px;
     }
 
     .Videos{
         position: relative;
-        top: 270px;
-        width: 450px;
-        height: 500px;
+        border: 10px solid hotpink;
+        background-color: indigo;
+        top: 260px;
+        width: 480px;
+        height: 270px;
+        right: 10px;
         display: block;
         margin: 0 auto;
     
