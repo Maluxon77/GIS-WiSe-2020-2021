@@ -21,10 +21,10 @@ main * {
 }
 
 body {
-    background-image: url(2ndBackground.png), url(background2.png);
+    background-image: url(2ndBackground.png), url(background2.jpg);
     background-position: center top, right top;
     background-repeat: no-repeat, repeat;
-    background-size: 60%, 5000px;
+    background-size: 60%;
     background-position-y: -450px, 0px;
     padding: 15px;
     font-family: sans-serif;
@@ -256,7 +256,7 @@ form {
     
 
     body{
-        background-size: 100%, 1%;
+        background-size: 100%;
         background-position-y: 0px, 0px;
     }
 
@@ -438,7 +438,7 @@ form {
     }
 
     body{
-        background-size: 100%, 1%;
+        background-size: 100%;
         background-position-y: 0px, 0px;
     }
     div>p{
