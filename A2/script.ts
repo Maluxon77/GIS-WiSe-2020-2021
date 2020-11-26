@@ -26,6 +26,10 @@ interface Blätter {
     farbe: string;
 }
 
+function verlinkung(): void {
+    window.open("https://maluxon77.github.io/GIS-WiSe-2020-2021/A2/Bl%C3%A4tter", "_blank");
+}
 
+document.querySelector("#Blatt").addEventListener("click", verlinkung);
 
 
