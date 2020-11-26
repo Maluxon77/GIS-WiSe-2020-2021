@@ -1,0 +1,43 @@
+main * {
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(2ndBackground.png), url(background2.jpg);
+    background-position: center top, right top;
+    background-repeat: no-repeat, repeat;
+    background-size: 60%;
+    background-position-y: -450px, 0px;
+    padding: 15px;
+    font-family: sans-serif;
+}
+
+h1{
+    color: darkgreen;
+    font-style: italic;
+    font-size: 100px;
+    position: relative;
+    bottom: 50px;
+    text-shadow: 5px 4px black;
+    text-align: center;
+    
+}
+
+.Buttons {
+    font-size: 10px;
+    position: relative;
+    left: 600px;
+}
+
+#Blatt {
+    margin: 50px;
+}
+
+#Stamm {
+    margin: 50px;
+}
+
+#Topf{
+    margin: 50px;
+}
+
