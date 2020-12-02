@@ -3,9 +3,9 @@ main * {
 }
 
 body {
-    background-image: url(2ndBackground.png), url(background2.jpg);
-    background-position: center top, right top;
-    background-repeat: no-repeat, repeat;
+    background-image: url(background2.jpg);
+    background-position: right top;
+    background-repeat: repeat;
     background-size: 60%;
     background-position-y: -450px, 0px;
     padding: 15px;
@@ -23,21 +23,61 @@ h1{
     
 }
 
-.Buttons {
-    font-size: 10px;
+
+.Buttons{
+   margin-left: 400px;
+}
+
+#bStamm {
+    margin-left: 800px;
+}
+
+#bTopf {
+    margin-left: 500px;
     position: relative;
-    left: 600px;
+    bottom: 15px;
 }
 
-#Blatt {
-    margin: 50px;
+#bEnd {
+    position: relative;
+    top: 350px;
+    right: 100px;
 }
 
-#Stamm {
-    margin: 50px;
+#Topf1 {
+    position: relative;
+    width: 500px;
 }
 
-#Topf{
-    margin: 50px;
+#Topf2 {
+    position: relative;
+    width: 240px;
+    bottom: 80px;
 }
 
+#Topf3 {
+    position: relative;
+    width: 300px;
+    left: 100px;
+    bottom: 90px
+}
+
+#Stamm1 {
+    position: relative;
+    width: 600px;
+}
+
+#Blatt1 {
+    position: relative;
+    width: 500px;
+}
+
+#Blatt2 {
+    position: relative;
+    width: 500px;
+}
+
+#Blatt3 {
+    position: relative;
+    width: 500px;
+}

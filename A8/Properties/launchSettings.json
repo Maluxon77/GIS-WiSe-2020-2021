@@ -1,9 +1,0 @@
-{
-  "profiles": {
-    "A8": {
-      "commandName": "Executable",
-      "executablePath": "fusee",
-      "commandLineArgs": "player $(TargetPath)"
-    }
-  }
-}
