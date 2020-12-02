@@ -44,40 +44,9 @@ h1{
     right: 100px;
 }
 
-#Topf1 {
+#bilderTopf {
     position: relative;
-    width: 500px;
+    width: 10px, 10px, 10px;
+    
 }
 
-#Topf2 {
-    position: relative;
-    width: 240px;
-    bottom: 80px;
-}
-
-#Topf3 {
-    position: relative;
-    width: 300px;
-    left: 100px;
-    bottom: 90px
-}
-
-#Stamm1 {
-    position: relative;
-    width: 600px;
-}
-
-#Blatt1 {
-    position: relative;
-    width: 500px;
-}
-
-#Blatt2 {
-    position: relative;
-    width: 500px;
-}
-
-#Blatt3 {
-    position: relative;
-    width: 500px;
-}
