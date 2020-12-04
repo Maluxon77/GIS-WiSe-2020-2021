@@ -126,9 +126,13 @@ var Daten;
         let answer = await fetchvar.json();
         if (answer.error != undefined) {
             console.log(answer.error);
+            let serverAnt = document.getElementById("Serverantwort-");
+            serverAnt.appendChild(document.createTextNode("" + answer.error));
         }
         else if (answer.message != undefined) {
             console.log(answer.message);
+            let serverAnt = document.getElementById("Serverantwort");
+            serverAnt.appendChild(document.createTextNode("" + answer.message));
         }
     }
 })(Daten || (Daten = {}));

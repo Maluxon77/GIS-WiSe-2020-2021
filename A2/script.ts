@@ -64,7 +64,7 @@ namespace Daten {
             let d3: HTMLImageElement = document.createElement("img");
             let divPic3: HTMLElement = document.getElementById("finalstamm");
             d3.src = item3.topf.link;
-            divPic3.appendChild(d3);
+            divPic3.appendChild(d3);   
             
         }
     }
@@ -159,7 +159,16 @@ namespace Daten {
         url = url + "?" + query.toString();
         let fetchvar: Response = await fetch(url);
         let answer: Server = await fetchvar.json();
-        if (answer.error != undefined) {console.log(answer.error); }
-        else if (answer.message != undefined) {console.log(answer.message); }
+        if (answer.error != undefined) {
+            console.log(answer.error); 
+            let serverAnt: HTMLElement = document.getElementById("Serverantwort-");
+            serverAnt.appendChild(document.createTextNode("" + answer.error));
+        }
+
+        else if (answer.message != undefined) {
+            console.log(answer.message); 
+            let serverAnt: HTMLElement = document.getElementById("Serverantwort");
+            serverAnt.appendChild(document.createTextNode("" + answer.message));
+        }
     }
 }

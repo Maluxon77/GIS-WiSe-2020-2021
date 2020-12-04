@@ -19,10 +19,8 @@ h1{
     position: relative;
     bottom: 50px;
     text-shadow: 5px 4px black;
-    text-align: center;
-    
+    text-align: center; 
 }
-
 
 .Buttons{
    margin-left: 400px;
@@ -98,6 +96,25 @@ h1{
     width: 150px;
     left: 845px;
     bottom: 45px;
+}
+
+#Serverantwort-  {
+    position: relative;
+    color: red;
+    left: 200px;
+}
+
+#Serverantwort  {
+    position: relative;
+    left: 900px;
+    color: green;
+}
+
+#zurück {
+    position: relative;
+    left: 830px;
+    width: 200px;
+    top: 200px;
 }
 
 
