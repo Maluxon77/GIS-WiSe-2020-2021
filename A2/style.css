@@ -44,9 +44,60 @@ h1{
     right: 100px;
 }
 
-#bilderTopf {
+#bilderTopf img{
     position: relative;
-    width: 10px, 10px, 10px;
+    width: 400px;
+}
+
+#bilderBlatt img{
+    position: relative;
+    width: 500px;
+}
+
+#bilderStamm img{
+    position: relative;
+    width: 500px;
+}
+
+#blattaus img{
+    position: relative;
+    left: 350px;
+    width: 200px;
+}
+
+#stammaus img {
+    position: relative;
+    width: 350px;
+    left: 1200px;
+    bottom: 100px;
     
 }
+
+#topfaus img {
+    position: relative; 
+    width: 200px;
+    left: 850px;
+    bottom: 250px;
+}
+
+#finalblatt img {
+    position: relative;
+    width: 250px;
+    left: 800px;
+}
+
+#finalstamm img {
+    position: relative;
+    width: 250px;
+    left: 800px;
+    bottom: 10px;
+}
+
+#finaltopf img {
+    position: relative;
+    width: 150px;
+    left: 845px;
+    bottom: 45px;
+}
+
 
