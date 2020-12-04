@@ -159,6 +159,8 @@ namespace Daten {
         url = url + "?" + query.toString();
         let fetchvar: Response = await fetch(url);
         let answer: Server = await fetchvar.json();
+
+        
         if (answer.error != undefined) {
             console.log(answer.error); 
             let serverAnt: HTMLElement = document.getElementById("Serverantwort-");
