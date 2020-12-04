@@ -65,6 +65,7 @@ namespace Daten {
             let divPic3: HTMLElement = document.getElementById("finalstamm");
             d3.src = item3.topf.link;
             divPic3.appendChild(d3);
+            
         }
     }
 
