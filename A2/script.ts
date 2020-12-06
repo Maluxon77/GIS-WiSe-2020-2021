@@ -1,14 +1,15 @@
 namespace Daten {
+    //Interfaces
     export interface Bild {
         topf: Element1;
         stamm: Element1;
-        blätter: Element1;
+        blaetter: Element1;
     }
 
     export interface Bildspeicher {
         topf: Element1[];
         stamm: Element1[];
-        blätter: Element1[];
+        blaetter: Element1[];
     }
 
     export interface Element1 {
@@ -20,15 +21,16 @@ namespace Daten {
         error: String;
         message: String;
     }
-
+    //Variablendeklaration
+    document.querySelector("h1").innerHTML = "Build Your Plant";
     export let blättersp: Element1[] = [];
     export let topfsp: Element1[] = [];
     export let stammsp: Element1[] = [];
-    export let wahl: Bild = { blätter: undefined, stamm: undefined, topf: undefined};
+    export let wahl: Bild = { blaetter: undefined, stamm: undefined, topf: undefined};
 
-    window.addEventListener("load", finishedloading);
-
-    function finishedloading(): void {
+    //Funktion zum Laden und Ánzeigen der getroffenen Bildauswahl auf der Haupt- und Endseite
+    window.addEventListener("load", loadingPicture);
+    function loadingPicture(): void {
         let item1: Bild = JSON.parse(localStorage.getItem("1"));
         let item2: Bild = JSON.parse(localStorage.getItem("2"));
         let item3: Bild = JSON.parse(localStorage.getItem("3"));
@@ -36,7 +38,7 @@ namespace Daten {
         if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Main.html") {
             let d1: HTMLImageElement = document.createElement("img");
             let divPic: HTMLElement = document.getElementById("blattaus");
-            d1.src = item1.blätter.link;
+            d1.src = item1.blaetter.link;
             divPic.appendChild(d1);
         
             let d2: HTMLImageElement = document.createElement("img");
@@ -50,10 +52,10 @@ namespace Daten {
             divPic3.appendChild(d3);
         }
         
-        if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Final.html"){
+        if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Final.html") {
             let d1: HTMLImageElement = document.createElement("img");
             let divPic: HTMLElement = document.getElementById("finalblatt");
-            d1.src = item1.blätter.link;
+            d1.src = item1.blaetter.link;
             divPic.appendChild(d1);
 
             let d2: HTMLImageElement = document.createElement("img");
@@ -69,8 +71,7 @@ namespace Daten {
         }
     }
 
-    document.querySelector("h1").innerHTML = "Build Your Plant";
-
+    //Deklaration der Buttons und die dazugehörigen Funktionen zur Weiterleitung auf die Unterseiten
     if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Main.html") {
         let bBlattAus: HTMLButtonElement = <HTMLButtonElement>document.getElementById("bBlätter");
         bBlattAus.addEventListener("click", openBlätter);
@@ -106,52 +107,53 @@ namespace Daten {
         bzurück.addEventListener("click", openMain);
     }
 
-    function getImage(bild: Element1): void {
-        if (bild.typ == 1) {wahl.blätter = bild; }
-        if (bild.typ == 2) {wahl.stamm = bild; }
-        if (bild.typ == 3) {wahl.topf = bild; }
-        localStorage.setItem("" + bild.typ, JSON.stringify(wahl));
+    //Funktion zum speichern des Interface Objektes in den Local Storage
+    function getImage(_bild: Element1): void {
+        if (_bild.typ == 1) {wahl.blaetter = _bild; }
+        if (_bild.typ == 2) {wahl.stamm = _bild; }
+        if (_bild.typ == 3) {wahl.topf = _bild; }
+        localStorage.setItem("" + _bild.typ, JSON.stringify(wahl));
     }
 
+    //Funktion zum Laden der Bilder auf den Unterseiten
     ladeBilderAusJSON("data.json");
-
-
     async function ladeBilderAusJSON( _url: RequestInfo): Promise<void> {
         let response: Response = await fetch (_url);
         let json: string = JSON.stringify(await response.json());
         let jsonToObj: Bildspeicher = JSON.parse(json);
         
         if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Blaetter.html") {
-            let divPic: HTMLElement = document.getElementById("bilderBlatt");
-            for (let i: number = 0; i < jsonToObj.blätter.length; i++) {
-                let d1: HTMLImageElement = document.createElement("img");
-                d1.addEventListener("click", function (): void {getImage(jsonToObj.blätter[i]); });
-                d1.src = jsonToObj.blätter[i].link;
-                divPic.appendChild(d1);
+            let divSelect: HTMLElement = document.getElementById("bilderBlatt");
+            for (let _i: number = 0; _i < jsonToObj.blaetter.length; _i++) {
+                let divPicture: HTMLImageElement = document.createElement("img");
+                divPicture.addEventListener("click", function (): void {getImage(jsonToObj.blaetter[_i]); });
+                divPicture.src = jsonToObj.blaetter[_i].link;
+                divSelect.appendChild(divPicture);
             }
         }
 
         if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Stamm.html") {
-            let divPic: HTMLElement = document.getElementById("bilderStamm");
-            for (let i: number = 0; i < jsonToObj.stamm.length; i++) {
-                let d1: HTMLImageElement = document.createElement("img");
-                d1.addEventListener("click", function (): void {getImage(jsonToObj.stamm[i]); });
-                d1.src = jsonToObj.stamm[i].link;
-                divPic.appendChild(d1);
+            let divSelect: HTMLElement = document.getElementById("bilderStamm");
+            for (let _i: number = 0; _i < jsonToObj.stamm.length; _i++) {
+                let divPicture: HTMLImageElement = document.createElement("img");
+                divPicture.addEventListener("click", function (): void {getImage(jsonToObj.stamm[_i]); });
+                divPicture.src = jsonToObj.stamm[_i].link;
+                divSelect.appendChild(divPicture);
             }
         }
 
         if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Topf.html") {
-            let divPic: HTMLElement = document.getElementById("bilderTopf");
-            for (let i: number = 0; i < jsonToObj.topf.length; i++) {
-                let d1: HTMLImageElement = document.createElement("img");
-                d1.addEventListener("click", function (): void {getImage(jsonToObj.topf[i]); });
-                d1.src = jsonToObj.topf[i].link;
-                divPic.appendChild(d1);
+            let divSelect: HTMLElement = document.getElementById("bilderTopf");
+            for (let _i: number = 0; _i < jsonToObj.topf.length; _i++) {
+                let divPicture: HTMLImageElement = document.createElement("img");
+                divPicture.addEventListener("click", function (): void {getImage(jsonToObj.topf[_i]); });
+                divPicture.src = jsonToObj.topf[_i].link;
+                divSelect.appendChild(divPicture);
             }
         }
     }
 
+    //Regulierung der Serverrückgabe + Ausgabe auf der "Final"Seite
     serverFunction();
     async function serverFunction(): Promise<void> {
         let query: URLSearchParams = new URLSearchParams(<any>localStorage);
