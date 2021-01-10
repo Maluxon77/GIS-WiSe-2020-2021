@@ -160,19 +160,19 @@ namespace Daten {
         let url: string = "https://gis-communication.herokuapp.com";
         url = url + "?" + query.toString();
         let fetchvar: Response = await fetch(url);
-        let answer: Server = await fetchvar.json();
+        let serverResponse: Server = await fetchvar.json();
 
         
-        if (answer.error != undefined) {
-            console.log(answer.error); 
+        if (serverResponse.error != undefined) {
+            console.log(serverResponse.error); 
             let serverAnt: HTMLElement = document.getElementById("Serverantwort-");
-            serverAnt.appendChild(document.createTextNode("" + answer.error));
+            serverAnt.appendChild(document.createTextNode("" + serverResponse.error));
         }
 
-        else if (answer.message != undefined) {
-            console.log(answer.message); 
+        else if (serverResponse.message != undefined) {
+            console.log(serverResponse.message); 
             let serverAnt: HTMLElement = document.getElementById("Serverantwort");
-            serverAnt.appendChild(document.createTextNode("" + answer.message));
+            serverAnt.appendChild(document.createTextNode("" + serverResponse.message));
         }
     }
 }

@@ -1,19 +1,22 @@
 "use strict";
 var Daten;
 (function (Daten) {
+    //Variablendeklaration
+    document.querySelector("h1").innerHTML = "Build Your Plant";
     Daten.blättersp = [];
     Daten.topfsp = [];
     Daten.stammsp = [];
-    Daten.wahl = { blätter: undefined, stamm: undefined, topf: undefined };
-    window.addEventListener("load", finishedloading);
-    function finishedloading() {
+    Daten.wahl = { blaetter: undefined, stamm: undefined, topf: undefined };
+    //Funktion zum Laden und Ánzeigen der getroffenen Bildauswahl auf der Haupt- und Endseite
+    window.addEventListener("load", loadingPicture);
+    function loadingPicture() {
         let item1 = JSON.parse(localStorage.getItem("1"));
         let item2 = JSON.parse(localStorage.getItem("2"));
         let item3 = JSON.parse(localStorage.getItem("3"));
         if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Main.html") {
             let d1 = document.createElement("img");
             let divPic = document.getElementById("blattaus");
-            d1.src = item1.blätter.link;
+            d1.src = item1.blaetter.link;
             divPic.appendChild(d1);
             let d2 = document.createElement("img");
             let divPic2 = document.getElementById("topfaus");
@@ -27,7 +30,7 @@ var Daten;
         if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Final.html") {
             let d1 = document.createElement("img");
             let divPic = document.getElementById("finalblatt");
-            d1.src = item1.blätter.link;
+            d1.src = item1.blaetter.link;
             divPic.appendChild(d1);
             let d2 = document.createElement("img");
             let divPic2 = document.getElementById("finaltopf");
@@ -39,7 +42,7 @@ var Daten;
             divPic3.appendChild(d3);
         }
     }
-    document.querySelector("h1").innerHTML = "Build Your Plant";
+    //Deklaration der Buttons und die dazugehörigen Funktionen zur Weiterleitung auf die Unterseiten
     if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Main.html") {
         let bBlattAus = document.getElementById("bBlätter");
         bBlattAus.addEventListener("click", openBlätter);
@@ -72,67 +75,70 @@ var Daten;
         let bzurück = document.getElementById("zurück");
         bzurück.addEventListener("click", openMain);
     }
-    function getImage(bild) {
-        if (bild.typ == 1) {
-            Daten.wahl.blätter = bild;
+    //Funktion zum speichern des Interface Objektes in den Local Storage
+    function getImage(_bild) {
+        if (_bild.typ == 1) {
+            Daten.wahl.blaetter = _bild;
         }
-        if (bild.typ == 2) {
-            Daten.wahl.stamm = bild;
+        if (_bild.typ == 2) {
+            Daten.wahl.stamm = _bild;
         }
-        if (bild.typ == 3) {
-            Daten.wahl.topf = bild;
+        if (_bild.typ == 3) {
+            Daten.wahl.topf = _bild;
         }
-        localStorage.setItem("" + bild.typ, JSON.stringify(Daten.wahl));
+        localStorage.setItem("" + _bild.typ, JSON.stringify(Daten.wahl));
     }
+    //Funktion zum Laden der Bilder auf den Unterseiten
     ladeBilderAusJSON("data.json");
     async function ladeBilderAusJSON(_url) {
         let response = await fetch(_url);
         let json = JSON.stringify(await response.json());
         let jsonToObj = JSON.parse(json);
         if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Blaetter.html") {
-            let divPic = document.getElementById("bilderBlatt");
-            for (let i = 0; i < jsonToObj.blätter.length; i++) {
-                let d1 = document.createElement("img");
-                d1.addEventListener("click", function () { getImage(jsonToObj.blätter[i]); });
-                d1.src = jsonToObj.blätter[i].link;
-                divPic.appendChild(d1);
+            let divSelect = document.getElementById("bilderBlatt");
+            for (let _i = 0; _i < jsonToObj.blaetter.length; _i++) {
+                let divPicture = document.createElement("img");
+                divPicture.addEventListener("click", function () { getImage(jsonToObj.blaetter[_i]); });
+                divPicture.src = jsonToObj.blaetter[_i].link;
+                divSelect.appendChild(divPicture);
             }
         }
         if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Stamm.html") {
-            let divPic = document.getElementById("bilderStamm");
-            for (let i = 0; i < jsonToObj.stamm.length; i++) {
-                let d1 = document.createElement("img");
-                d1.addEventListener("click", function () { getImage(jsonToObj.stamm[i]); });
-                d1.src = jsonToObj.stamm[i].link;
-                divPic.appendChild(d1);
+            let divSelect = document.getElementById("bilderStamm");
+            for (let _i = 0; _i < jsonToObj.stamm.length; _i++) {
+                let divPicture = document.createElement("img");
+                divPicture.addEventListener("click", function () { getImage(jsonToObj.stamm[_i]); });
+                divPicture.src = jsonToObj.stamm[_i].link;
+                divSelect.appendChild(divPicture);
             }
         }
         if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Topf.html") {
-            let divPic = document.getElementById("bilderTopf");
-            for (let i = 0; i < jsonToObj.topf.length; i++) {
-                let d1 = document.createElement("img");
-                d1.addEventListener("click", function () { getImage(jsonToObj.topf[i]); });
-                d1.src = jsonToObj.topf[i].link;
-                divPic.appendChild(d1);
+            let divSelect = document.getElementById("bilderTopf");
+            for (let _i = 0; _i < jsonToObj.topf.length; _i++) {
+                let divPicture = document.createElement("img");
+                divPicture.addEventListener("click", function () { getImage(jsonToObj.topf[_i]); });
+                divPicture.src = jsonToObj.topf[_i].link;
+                divSelect.appendChild(divPicture);
             }
         }
     }
+    //Regulierung der Serverrückgabe + Ausgabe auf der "Final"Seite
     serverFunction();
     async function serverFunction() {
         let query = new URLSearchParams(localStorage);
         let url = "https://gis-communication.herokuapp.com";
         url = url + "?" + query.toString();
         let fetchvar = await fetch(url);
-        let answer = await fetchvar.json();
-        if (answer.error != undefined) {
-            console.log(answer.error);
+        let serverResponse = await fetchvar.json();
+        if (serverResponse.error != undefined) {
+            console.log(serverResponse.error);
             let serverAnt = document.getElementById("Serverantwort-");
-            serverAnt.appendChild(document.createTextNode("" + answer.error));
+            serverAnt.appendChild(document.createTextNode("" + serverResponse.error));
         }
-        else if (answer.message != undefined) {
-            console.log(answer.message);
+        else if (serverResponse.message != undefined) {
+            console.log(serverResponse.message);
             let serverAnt = document.getElementById("Serverantwort");
-            serverAnt.appendChild(document.createTextNode("" + answer.message));
+            serverAnt.appendChild(document.createTextNode("" + serverResponse.message));
         }
     }
 })(Daten || (Daten = {}));
