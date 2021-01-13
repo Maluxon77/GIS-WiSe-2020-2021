@@ -1,0 +1,22 @@
+{
+  "name": "gisdreifinnganz",
+  "version": "1.0.0",
+  "description": "aufgabe 3 GIS",
+  "main": "app.js",
+  "scripts": {
+    "start": "A3\\script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maluxon77/GIS-WiSe-2020-2021.git"
+  },
+  "author": "Finn Ganz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maluxon77/GIS-WiSe-2020-2021/issues"
+  },
+  "homepage": "https://github.com/Maluxon77/GIS-WiSe-2020-2021#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.20"
+  }
+}
