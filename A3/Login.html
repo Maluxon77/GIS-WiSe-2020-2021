@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="utf-8">
-    <script src="script.js" defer></script>
+    <script src="serverTest.js" defer></script>
     <title>Einloggen</title>
 </head>
 
 <body>
 
-    <h2>Entrance</h2>
+    <h2>Login</h2>
+
+    <form action="https://gisaufgabe2020.herokuapp.com/" method="get">
 
 
         <label for="Email">Email:</label><br>
@@ -18,8 +20,8 @@
         <label for="Passwort">Passwort:</label><br>
         <input type="password" name="Password" required /><br/><br>
 
-        <button>Anmelden</button>
-  
+        <button id="send">Anmelden</button>
+    </form>
 
     <div></div>
 
