@@ -36,7 +36,7 @@ export namespace A3 {
                 _response.setHeader("content-type", "application/json"); 
                 _response.write(JSON.stringify(query));
             } else {
-                _response.write("please open /html or /json");
+                _response.write("waiting");
             }
         _response.end(); 
         }
