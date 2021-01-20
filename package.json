@@ -4,7 +4,7 @@
   "description": "aufgabe 3 GIS",
   "main": "app.js",
   "scripts": {
-    "start": "node A3/script.js"
+    "start": "node A3/serverTest.js"
   },
   "repository": {
     "type": "git",
