@@ -1,27 +1,17 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.A3 = void 0;
-const Http = require("http");
-var A3;
-(function (A3) {
-    console.log("Starting server"); // Konsolenausgabe
-    let port = Number(process.env.PORT); // Holt aktuellen Port
-    if (!port)
-        port = 8100; // Wenn kein Port, Port = 8100
-    let server = Http.createServer(); // Erstellt neuen HTTPServer
-    server.addListener("request", handleRequest); // Fuegt Listener hinzu
-    server.addListener("listening", handleListen);
-    server.listen(port); // Horcht auf definierten Port
-    function handleListen() {
-        console.log("Listening");
+var A_3;
+(function (A_3) {
+    let formData = new FormData(document.forms[0]);
+    let btSend = document.getElementById("send");
+    btSend.addEventListener("click", send);
+    async function send() {
+        let url = "https://gis2020jw.herokuapp.com/";
+        let query = new URLSearchParams(formData);
+        url = url + "?" + query.toString();
+        let response = await fetch(url);
+        let text = await response.text();
+        console.log("Answer:");
+        console.log(text);
     }
-    function handleRequest(_request, _response) {
-        console.log("I hear voices!"); // Konsolenausgabe
-        _response.setHeader("content-type", "text/html; charset=utf-8"); // Antwort als HTML
-        _response.setHeader("Access-Control-Allow-Origin", "*");
-        _response.write(_request.url); // Antwort URL ausgeben
-        console.log(_request.url); // URL auf Konsole ausgebe
-        _response.end(); // Antwort abschliessen
-    }
-})(A3 = exports.A3 || (exports.A3 = {}));
+})(A_3 || (A_3 = {}));
 //# sourceMappingURL=serverTest.js.map
