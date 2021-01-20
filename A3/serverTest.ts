@@ -21,7 +21,7 @@ export namespace A3 {
         _response.setHeader("content-type", "text/html; charset=utf-8"); // Antwort als HTML
         _response.setHeader("Access-Control-Allow-Origin", "*");
         _response.write(_request.url); // Antwort URL ausgeben
-        console.log(_request.url); // URL auf Konsole ausgeben
+        console.log(_request.url); // URL auf Konsole ausgebe
         _response.end(); // Antwort abschliessen
     }
 }
