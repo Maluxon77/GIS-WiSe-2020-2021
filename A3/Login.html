@@ -1,37 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-    <meta charset="utf-8">
-    <script src="script.js" defer></script>
-    <title>Einloggen</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
 </head>
-
 <body>
-
-    <nav>
-        <a href="A3\Login.html">Login</a> |
-        <a href="A3\user.html">Nutzer</a> |
-        <a href="A3\test.html">Registrieren</a>
-
-    </nav>
-
-    <h2>Anmeldung</h2>
-
-    <form id="form" onsubmit="return false">
-
-        <label for="Email">Email:</label><br>
-        <input type="text" name="Email" required /><br/>
-
-        <label for="Passwort">Passwort:</label><br>
-        <input type="password" name="Password" required /><br/><br>
-
-        <button id="submit">Anmelden</button>
+    <form action="https://gisaufgabe2020.herokuapp.com/" method="get">
+        <input name="name" type="text" placeholder="Name">
+        <input name="email" type="email" placeholder="Email" required>
+        <button type="submit">Abschicken</button>
     </form>
-
-    <div id="antwort"></div>
-
 </body>
-
 </html>

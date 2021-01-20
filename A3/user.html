@@ -1,31 +1,16 @@
-  
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-    <meta charset="utf-8">
-    <script src="script2.js" defer></script>
-    <title>Registrieren</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js" defer></script>
+    <title>Form</title>
 </head>
-
 <body>
-
-    <nav>
-        <a href="A3\Login.html">Login</a> |
-        <a href="A3\user.html">Nutzer</a> |
-        <a href="A3\test.html">Registrieren</a>
-
-    </nav>
-
-
-    <h2>Alle Nutzer</h2>
-
-
-    <button id="submit">Abfragen der Nutzer</button>
-
-
-    <div id="antwort"></div>
-
+    <form>
+        <input name="name" type="text" placeholder="Name">
+        <input name="email" type="email" placeholder="Email" required>
+        <button type="button" id="send">Abschicken</button>
+    </form>
 </body>
-
 </html>
