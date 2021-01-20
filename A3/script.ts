@@ -1,15 +1,16 @@
 import * as Http from "http";
+import * as url from "url";
 
 export namespace A3 {
-    console.log("Starting server"); // Konsolenausgabe
-    let port: number = Number(process.env.PORT); // Holt aktuellen Port
+    console.log("Starting server");
+    let port: number = Number(process.env.PORT); 
     if (!port)
-        port = 8100; // Wenn kein Port, Port = 8100
+        port = 8100; 
 
-    let server: Http.Server = Http.createServer(); // Erstellt neuen HTTPServer
-    server.addListener("request", handleRequest); // Fuegt Listener hinzu
+    let server: Http.Server = Http.createServer(); 
+    server.addListener("request", handleRequest); 
     server.addListener("listening", handleListen);
-    server.listen(port); // Horcht auf definierten Port
+    server.listen(port); 
 
     function handleListen(): void {
         console.log("Listening");
@@ -17,11 +18,11 @@ export namespace A3 {
 
 
     function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void {
-        console.log("I hear voices!"); // Konsolenausgabe
-        _response.setHeader("content-type", "text/html; charset=utf-8"); // Antwort als HTML
+        console.log("I hear voices!"); 
+        _response.setHeader("content-type", "text/html; charset=utf-8"); 
         _response.setHeader("Access-Control-Allow-Origin", "*");
-        _response.write(_request.url); // Antwort URL ausgeben
-        console.log(_request.url); // URL auf Konsole ausgebe
-        _response.end(); // Antwort abschliessen
+        _response.write(_request.url); 
+        console.log(_request.url); 
+        _response.end(); 
     }
 }

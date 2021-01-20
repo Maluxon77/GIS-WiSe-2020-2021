@@ -4,24 +4,24 @@ exports.A3 = void 0;
 const Http = require("http");
 var A3;
 (function (A3) {
-    console.log("Starting server"); // Konsolenausgabe
-    let port = Number(process.env.PORT); // Holt aktuellen Port
+    console.log("Starting server");
+    let port = Number(process.env.PORT);
     if (!port)
-        port = 8100; // Wenn kein Port, Port = 8100
-    let server = Http.createServer(); // Erstellt neuen HTTPServer
-    server.addListener("request", handleRequest); // Fuegt Listener hinzu
+        port = 8100;
+    let server = Http.createServer();
+    server.addListener("request", handleRequest);
     server.addListener("listening", handleListen);
-    server.listen(port); // Horcht auf definierten Port
+    server.listen(port);
     function handleListen() {
         console.log("Listening");
     }
     function handleRequest(_request, _response) {
-        console.log("I hear voices!"); // Konsolenausgabe
-        _response.setHeader("content-type", "text/html; charset=utf-8"); // Antwort als HTML
+        console.log("I hear voices!");
+        _response.setHeader("content-type", "text/html; charset=utf-8");
         _response.setHeader("Access-Control-Allow-Origin", "*");
-        _response.write(_request.url); // Antwort URL ausgeben
-        console.log(_request.url); // URL auf Konsole ausgebe
-        _response.end(); // Antwort abschliessen
+        _response.write(_request.url);
+        console.log(_request.url);
+        _response.end();
     }
 })(A3 = exports.A3 || (exports.A3 = {}));
 //# sourceMappingURL=script.js.map
