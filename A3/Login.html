@@ -3,25 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <script src="script.js" defer></script>
-    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Registrierung</title>
 </head>
 
 <body>
+    <nav>
+       
+        <div id="navigation">
+            <a class="current" href="/A3/Nutzer.html">Benutzer</a>
+            <a  href="/A3/Einloggen.html">login</a>
+            <a  href="/A3/Login.html">Anmelden</a>     
+       </div>
+
+    </nav>
     <form>
-        <div>
-            <input name="name" type="text" placeholder="Name">
-            <input name="email" type="email" placeholder="Email">
-        </div>
-        <div>
-            <button type="button" id="sendHTML">Abschicken HTML</button>
-            <button type="button" id="sendJSON">Abschicken JSON</button>
-        </div>
-        <p id="answerSec"></p>
+
+        <label for="fname">Vorname:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="lname">Nachname:</label><br>
+        <input type="text" id="lname" name="lname"><br>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <label for= passord> password:</label><br>
+        <input type=password id="password" name="password"><br>
+
+<button type="button" id="submitHTML">submit HTML</button>
+
+<div>
+    <p id = serverantwort> </p>
+</div>
 
 
-    </form>
+</form>
 </body>
 
 </html>

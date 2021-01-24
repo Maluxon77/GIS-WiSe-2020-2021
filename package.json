@@ -18,5 +18,9 @@
   "homepage": "https://github.com/Maluxon77/GIS-WiSe-2020-2021#readme",
   "devDependencies": {
     "@types/node": "^14.14.20"
+  },
+  "dependencies": {
+    "@types/mongodb": "^3.6.3",
+    "mongodb": "^3.6.3"
   }
 }

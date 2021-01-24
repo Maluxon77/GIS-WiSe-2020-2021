@@ -1,0 +1,45 @@
+main * {
+    font-family: sans-serif;
+}
+
+
+.sticky{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+#navigation a:hover{
+    background-color: chartreuse;
+    color: darkblue;
+}
+
+#navigation{
+    overflow: hidden;
+    background-color: black;
+    width: max-content;   
+}
+
+#navigation a{
+    float: right;
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+}
+
+form {
+    position: relative;
+    left: 750px;
+    top: 300px;
+    background-color: #eee;
+    width: 300px; 
+    padding: 20px;
+    border: 1px solid #8c8c8c;
+  }
+  label { 
+    display: block;
+    
+  }

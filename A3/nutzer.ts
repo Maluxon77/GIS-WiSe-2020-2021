@@ -1,8 +1,8 @@
 namespace A3 {
 
 
-    let submitbuttonHTML: HTMLButtonElement = <HTMLButtonElement>document.getElementById("submitHTML");
-    submitbuttonHTML.addEventListener("click", function (): void { submit("HTML"); });
+    let nutzerButton: HTMLButtonElement = <HTMLButtonElement>document.getElementById("nutzerButton");
+    nutzerButton.addEventListener("click", function (): void { submit("nutzer"); });
 
     let serverantwort: HTMLElement = document.getElementById("serverantwort");
 
@@ -11,15 +11,15 @@ namespace A3 {
         let url: string = "https://gisaufgabe2020.herokuapp.com/";
         let query: URLSearchParams = new URLSearchParams(<any>formData);
 
-        if (_parameter == "HTML") {
-            url = url + "/html";
+        if (_parameter == "nutzer") {
+            url = url + "/nutzer";
         }
 
         url = url + "?" + query.toString();
         let response: Response = await fetch(url);
         let text: string = await response.text();
         
-        if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Login.html") { 
+        if (window.location.pathname.substring(window.location.pathname.lastIndexOf("/") + 1) == "Nutzer.html") { 
         serverantwort.innerHTML = text; 
     }
     }
