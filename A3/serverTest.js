@@ -7,7 +7,7 @@ const Mongo = require("mongodb");
 var A3;
 (function (A3) {
     let students;
-    let databaseUrl = "mongodb+srv://FinnG:Venomancer123@gis3.z89dh.mongodb.net/Test?retryWrites=true&w=majority";
+    let databaseUrl = "mongodb+srv://FinnG:Venomancer123!@gis3.z89dh.mongodb.net/GIS3?retryWrites=true&w=majority";
     console.log("Starting server");
     let port = Number(process.env.PORT);
     if (!port)
@@ -34,29 +34,29 @@ var A3;
         _response.setHeader("Access-Control-Allow-Origin", "*");
         let q = url.parse(_request.url, true);
         let daten = q.query;
-        let wiedergabe = daten.fname;
-        wiedergabe += " " + daten.lname;
+        let rückgabe = daten.fname;
+        rückgabe += " " + daten.lname;
         if (q.pathname == "//html") {
-            _response.write(await wiedergabeSpeichern(q.query, daten.email));
+            _response.write(await storeRückgabe(q.query, daten.email));
         }
         if (q.pathname == "//einloggen") {
             _response.write(await login(daten.email, daten.password));
         }
         if (q.pathname == "//nutzer") {
-            _response.write(await retrieve());
+            _response.write(await retrieveStudents());
         }
         _response.end();
     }
-    async function retrieve() {
+    async function retrieveStudents() {
         let data = await students.find().toArray();
         if (data.length > 0) {
-            let stringData = "";
+            let dataString = "";
             for (let i = 0; i < data.length; i++) {
                 if (data[i].fname != undefined) {
-                    stringData = stringData + " " + data[i].fname + " " + data[i].lname + ",  ";
+                    dataString = dataString + " " + data[i].fname + " " + data[i].lname + ",  ";
                 }
             }
-            return (stringData);
+            return (dataString);
         }
         else
             return ("nicht vorhanden");
@@ -64,21 +64,21 @@ var A3;
     async function login(email, passwort) {
         let data = await students.find().toArray();
         if (data.length > 0) {
-            let stringData;
-            for (let i = 0; i < data.length; i++) {
-                if (data[i].email == email && data[i].password == passwort) {
-                    stringData = "angemeldet";
+            let dataString;
+            for (let counter = 0; counter < data.length; counter++) {
+                if (data[counter].email == email && data[counter].password == passwort) {
+                    dataString = "angemeldet";
                 }
                 else {
-                    stringData = "falsche Email oder falsches Passwort";
+                    dataString = "falsche Email oder falsches Passwort";
                 }
             }
-            return (stringData);
+            return (dataString);
         }
         else
             return "Anmeldedaten nicht gefunden";
     }
-    async function wiedergabeSpeichern(_rückgabe, email) {
+    async function storeRückgabe(_rückgabe, email) {
         let data = await students.find().toArray();
         if (data.length > 0) {
             for (let i = 0; i < data.length; i++) {

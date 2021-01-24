@@ -19,7 +19,7 @@ export namespace A3 {
 
 
     let students: Mongo.Collection;
-    let databaseUrl: string = "mongodb+srv://FinnG:Venomancer123@gis3.z89dh.mongodb.net/Test?retryWrites=true&w=majority";
+    let databaseUrl: string = "mongodb+srv://FinnG:Venomancer123!@gis3.z89dh.mongodb.net/GIS3?retryWrites=true&w=majority";
 
     
 
@@ -63,11 +63,11 @@ export namespace A3 {
 
         let q: url.UrlWithParsedQuery = url.parse(_request.url, true);
         let daten: ParsedUrlQuery = q.query;
-        let wiedergabe: string = <string>daten.fname;
-        wiedergabe += " " + daten.lname;
+        let rückgabe: string = <string>daten.fname;
+        rückgabe += " " + daten.lname;
 
         if (q.pathname == "//html") {
-            _response.write(await wiedergabeSpeichern(q.query, daten.email));
+            _response.write(await storeRückgabe(q.query, daten.email));
         }
 
         if (q.pathname == "//einloggen") {
@@ -75,24 +75,24 @@ export namespace A3 {
         }
 
         if (q.pathname == "//nutzer") {
-            _response.write(await retrieve());
+            _response.write(await retrieveStudents());
         }
 
         _response.end();
     }
 
 
-    async function retrieve(): Promise<String> {
+    async function retrieveStudents(): Promise<String> {
         let data: Antwort[] = await students.find().toArray();
         if (data.length > 0) {
-            let stringData: string = "";
+            let dataString: string = "";
             for (let i: number = 0; i < data.length; i++) {
                 if (data[i].fname != undefined) {
-                stringData = stringData + " " + data[i].fname + " " + data[i].lname + ",  ";
+                dataString = dataString + " " + data[i].fname + " " + data[i].lname + ",  ";
                 }
             }
 
-            return (stringData);
+            return (dataString);
         }
        else return ("nicht vorhanden");
     }
@@ -102,23 +102,23 @@ export namespace A3 {
         let data: Antwort[] = await students.find().toArray();
         if (data.length > 0 ) {
 
-            let stringData: string;
-            for (let i: number = 0; i < data.length; i++) {
-                if (data[i].email == email && data[i].password == passwort) {
-                stringData = "angemeldet";
+            let dataString: string;
+            for (let counter: number = 0; counter < data.length; counter++) {
+                if (data[counter].email == email && data[counter].password == passwort) {
+                dataString = "angemeldet";
                 }
                 else {
-                    stringData = "falsche Email oder falsches Passwort";
+                    dataString = "falsche Email oder falsches Passwort";
                 }
             }
 
-            return (stringData);
+            return (dataString);
         }
        else return "Anmeldedaten nicht gefunden";
 
     }
 
-    async function wiedergabeSpeichern(_rückgabe: Students, email: string | string[]): Promise<String> {
+    async function storeRückgabe(_rückgabe: Students, email: string | string[]): Promise<String> {
         let data: Antwort[] = await students.find().toArray();
         if (data.length > 0) {
         for (let i: number = 0; i < data.length; i ++ ) {
