@@ -37,17 +37,17 @@ var A3;
         let rückgabe = daten.fname;
         rückgabe += " " + daten.lname;
         if (q.pathname == "//html") {
-            _response.write(await storeRückgabe(q.query, daten.email));
+            _response.write(await wiedergabeSpeicher(q.query, daten.email));
         }
         if (q.pathname == "//einloggen") {
             _response.write(await login(daten.email, daten.password));
         }
         if (q.pathname == "//nutzer") {
-            _response.write(await retrieveStudents());
+            _response.write(await retrieve());
         }
         _response.end();
     }
-    async function retrieveStudents() {
+    async function retrieve() {
         let data = await students.find().toArray();
         if (data.length > 0) {
             let dataString = "";
@@ -78,7 +78,7 @@ var A3;
         else
             return "Anmeldedaten nicht gefunden";
     }
-    async function storeRückgabe(_rückgabe, email) {
+    async function wiedergabeSpeicher(_rückgabe, email) {
         let data = await students.find().toArray();
         if (data.length > 0) {
             for (let i = 0; i < data.length; i++) {

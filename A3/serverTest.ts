@@ -67,7 +67,7 @@ export namespace A3 {
         rückgabe += " " + daten.lname;
 
         if (q.pathname == "//html") {
-            _response.write(await storeRückgabe(q.query, daten.email));
+            _response.write(await wiedergabeSpeicher(q.query, daten.email));
         }
 
         if (q.pathname == "//einloggen") {
@@ -75,14 +75,14 @@ export namespace A3 {
         }
 
         if (q.pathname == "//nutzer") {
-            _response.write(await retrieveStudents());
+            _response.write(await retrieve());
         }
 
         _response.end();
     }
 
 
-    async function retrieveStudents(): Promise<String> {
+    async function retrieve(): Promise<String> {
         let data: Antwort[] = await students.find().toArray();
         if (data.length > 0) {
             let dataString: string = "";
@@ -118,7 +118,7 @@ export namespace A3 {
 
     }
 
-    async function storeRückgabe(_rückgabe: Students, email: string | string[]): Promise<String> {
+    async function wiedergabeSpeicher(_rückgabe: Students, email: string | string[]): Promise<String> {
         let data: Antwort[] = await students.find().toArray();
         if (data.length > 0) {
         for (let i: number = 0; i < data.length; i ++ ) {
