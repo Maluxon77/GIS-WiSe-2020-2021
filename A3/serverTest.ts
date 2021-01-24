@@ -63,11 +63,11 @@ export namespace A3 {
 
         let q: url.UrlWithParsedQuery = url.parse(_request.url, true);
         let daten: ParsedUrlQuery = q.query;
-        let rückgabe: string = <string>daten.fname;
-        rückgabe += " " + daten.lname;
+        let wiedergabe: string = <string>daten.fname;
+        wiedergabe += " " + daten.lname;
 
         if (q.pathname == "//html") {
-            _response.write(await storeRückgabe(q.query, daten.email));
+            _response.write(await wiedergabeSpeichern(q.query, daten.email));
         }
 
         if (q.pathname == "//einloggen") {
@@ -75,24 +75,24 @@ export namespace A3 {
         }
 
         if (q.pathname == "//nutzer") {
-            _response.write(await retrieveStudents());
+            _response.write(await retrieve());
         }
 
         _response.end();
     }
 
 
-    async function retrieveStudents(): Promise<String> {
+    async function retrieve(): Promise<String> {
         let data: Antwort[] = await students.find().toArray();
         if (data.length > 0) {
-            let dataString: string = "";
+            let stringData: string = "";
             for (let i: number = 0; i < data.length; i++) {
                 if (data[i].fname != undefined) {
-                dataString = dataString + " " + data[i].fname + " " + data[i].lname + ",  ";
+                stringData = stringData + " " + data[i].fname + " " + data[i].lname + ",  ";
                 }
             }
 
-            return (dataString);
+            return (stringData);
         }
        else return ("nicht vorhanden");
     }
@@ -102,23 +102,23 @@ export namespace A3 {
         let data: Antwort[] = await students.find().toArray();
         if (data.length > 0 ) {
 
-            let dataString: string;
-            for (let counter: number = 0; counter < data.length; counter++) {
-                if (data[counter].email == email && data[counter].password == passwort) {
-                dataString = "angemeldet";
+            let stringData: string;
+            for (let i: number = 0; i < data.length; i++) {
+                if (data[i].email == email && data[i].password == passwort) {
+                stringData = "angemeldet";
                 }
                 else {
-                    dataString = "falsche Email oder falsches Passwort";
+                    stringData = "falsche Email oder falsches Passwort";
                 }
             }
 
-            return (dataString);
+            return (stringData);
         }
        else return "Anmeldedaten nicht gefunden";
 
     }
 
-    async function storeRückgabe(_rückgabe: Students, email: string | string[]): Promise<String> {
+    async function wiedergabeSpeichern(_rückgabe: Students, email: string | string[]): Promise<String> {
         let data: Antwort[] = await students.find().toArray();
         if (data.length > 0) {
         for (let i: number = 0; i < data.length; i ++ ) {
