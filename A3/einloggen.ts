@@ -9,6 +9,7 @@ namespace A3 {
     async function submit(_parameter: string): Promise<void> {
         let formData: FormData = new FormData(document.forms[0]);
         let url: string = "https://gisaufgabe2020.herokuapp.com/";
+        // tslint:disable-next-line: no-any
         let query: URLSearchParams = new URLSearchParams(<any>formData);
 
         if (_parameter == "einloggen") {

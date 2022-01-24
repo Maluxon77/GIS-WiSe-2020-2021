@@ -19,7 +19,7 @@ export namespace A3 {
 
 
     let students: Mongo.Collection;
-    let databaseUrl: string = "mongodb+srv://FinnG:Venomancer123!@gis3.z89dh.mongodb.net/GIS3?retryWrites=true&w=majority";
+    let databaseUrl: string = "mongodb+srv://FinnG:Venomancer123!@gispruefung.z89dh.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 
     
 
@@ -122,7 +122,7 @@ export namespace A3 {
         let data: Antwort[] = await students.find().toArray();
         if (data.length > 0) {
         for (let i: number = 0; i < data.length; i ++ ) {
-            if (data[i].email == email){
+            if (data[i].email == email) {
                 return "Email ist bereits im Gebrauch";
             }
             else {
